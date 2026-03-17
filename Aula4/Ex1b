@@ -1,0 +1,28 @@
+#define on_LED1 PORTD|=(1<<PD2)
+#define off_LED1 PORTD&=~(1<<PD2)
+#define on_LED2 PORTD|=(1<<PD3)
+#define off_LED2 PORTD&=~(1<<PD3)
+#define mascara_botao1 (PIND&(1<<PD0))
+#define mascara_botao2 (PIND&(1<<PD1))
+void setup(){
+ DDRD = 0b00001100;
+  PORTD = 0b00000011;
+}
+void loop()
+{
+  
+    if(mascara_botao1 == 0)
+    {
+      on_LED1;
+      _delay_ms(1000); 
+      off_LED1;
+      
+    }
+     if(mascara_botao2 == 0)
+    {
+      on_LED2;
+      _delay_ms(100); 
+      off_LED2;
+     
+    }
+}
