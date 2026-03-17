@@ -6,7 +6,7 @@
 #define mascara_botao2 (PIND&(1<<PD1))
 void setup(){
  DDRD = 0b00001100;
-  PORTD = 0b00001100;
+  PORTD = 0b00000011;
 }
 void loop()
 {
