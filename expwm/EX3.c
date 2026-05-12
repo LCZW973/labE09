@@ -22,7 +22,7 @@ ISR(INT0_vect)
 }
 ISR(INT1_vect)
 {
-  if(contador<230)
+  if(contador<255)
      contador= contador + 25 ;
    OCR0A = contador;
 }
